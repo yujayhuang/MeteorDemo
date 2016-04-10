@@ -1,0 +1,12 @@
+/* CSS declarations go here */
+
+body{
+	background-color:#AAF2EB;
+    font-family: Georgia;
+    font-size: 1em;
+	text-align: center;
+}
+ul{
+	display:inline-block;
+	
+}

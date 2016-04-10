@@ -1,0 +1,59 @@
+<head>
+  <title>simple</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  {{> demo}}
+</body>
+
+<template name="demo">
+	<h1>Add Info</h1>
+		<form id="addInfo">
+			<label>Add Info</label>
+			<input id="" type="text" name="name" placeholder="Add Info"/>
+			<button  type="submit" value="submit">Submit</button>			
+		</form>
+	<hr />
+	<h1>Delete Info</h1>
+		<form id="delInfo">
+			<label>Delete Info</label>
+			<input type="text" name="name" placeholder="Delete Info"/>
+			<button type="submit" value="submit">Delete</button>			
+		</form>
+	<hr />
+	<h1>Modify Info</h1>
+		<form id="modifyInfo">
+			<label>Current Info</label>
+			<input  type="text" name="currentName" placeholder="Current Info"/>
+			<label>New Info</label>
+			<input  type="text" name="newName" placeholder="New Info"/>
+			<button type="submit" value="submit">Modify</button>			
+		</form>
+	<hr />
+	<h1>Search Info</h1>
+		<form id="searchName">
+			<label>Search </label>
+			<input  type="text" name="search" placeholder="Search"/>
+			<button type="submit" value="submit">Search</button>
+			<div><label>Result:</label>{{#each Info}}<p>{{info}}</p>{{/each}}</div>
+		</form>
+	<hr />
+    <div class="Box">
+		<h3>Data Info:</h3>
+        <ul>
+			{{#each dataInfo}}
+				<li>{{info}}</li>
+			{{/each}}
+		</ul>
+	</div>
+</template>
+<template name="info">
+  <h2>Learn Meteor!</h2>
+  <ul>
+    <li><a href="https://www.meteor.com/try">Do the Tutorial</a></li>
+    <li><a href="http://guide.meteor.com">Follow the Guide</a></li>
+    <li><a href="https://docs.meteor.com">Read the Docs</a></li>
+    <li><a href="https://forums.meteor.com">Discussions</a></li>
+  </ul>
+</template>
